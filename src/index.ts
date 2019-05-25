@@ -1,20 +1,8 @@
 import * as Line from '@line/bot-sdk';
-
-const lineConfig = {
-  channelAccessToken: '', // set your config
-  channelSecret: '' // set your config
-};
+import { getSendMessages } from './messages';
+import lineConfig from './line-config';
 
 const lineClient = new Line.Client(lineConfig);
-
-const getSendMessages = (): Line.Message[] => {
-  return [
-    {
-      type: 'text',
-      text: 'こんにちは！！'
-    } as Line.TextMessage
-  ];
-};
 
 const main = (messages: Line.Message[]) => {
   const arg = process.argv[2];
