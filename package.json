@@ -5,8 +5,11 @@
     "lint": "tslint --project tsconfig.json",
     "build": "tsc",
     "watch": "tsc --watch",
-    "exec": "node dist/index.js",
-    "start": "npm run build && npm run exec"
+    "exec:single": "node dist/singleSender.js",
+    "exec:multiple": "node dist/multipleSender.js",
+    "start": "npm start:single",
+    "start:single": "npm run build && npm run exec:single",
+    "start:multiple": "npm run build && npm run exec:multiple"
   },
   "dependencies": {
     "@line/bot-sdk": "^6.7.1",
