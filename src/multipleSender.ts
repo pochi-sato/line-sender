@@ -16,7 +16,7 @@ const main = async (index: number) => {
   }
   await lineClient.pushMessage(targetLineUserId, messages);
 
-  setTimeout(() => main(index + 1), 2000);
+  setTimeout(() => main(index + 1), 300);
 };
 
 main(initialIndex).catch(error => {
